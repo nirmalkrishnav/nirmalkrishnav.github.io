@@ -1,19 +1,30 @@
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
+@font-face {
+  font-family: 'Gothic A1';
+  src: local('Gothic A1'), url(./assets/fonts/GothicA1-Regular.ttf);
+}
+@font-face {
+  font-family: 'Gothic Bold';
+  src: local('Gothic Bold'), url(./assets/fonts/GothicA1-Bold.ttf);
+}
 
 html, body{
   margin:0;
   padding:0;
   background-color: #151515;
+  font-family: 'Gothic A1';
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Gothic Bold';
+
 }
 
 .app{
   color:#fff;
 }
 
+p{
+  color:#949495;
+}
 .w-40{
   width: 40%!important;
 }

@@ -4,8 +4,8 @@ import Bio from './../bio/Bio';
 
 function Left() {
     return (
-        <div className="left align-items-start d-flex flex-column justify-content-between">
-            <div>
+        <div className="left align-items-start d-flex flex-column justify-content-around p-3">
+            <div className="name">
                 <h2>Hello, I'm</h2>
                 <h2>Nirmal Krishna.</h2>
             </div>

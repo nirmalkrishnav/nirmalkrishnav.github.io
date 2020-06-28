@@ -3,7 +3,6 @@ import './App.css';
 import Left from './components/left-sidebar/Left';
 import Content from './components/content/Content';
 
-
 function App() {
   return (
     <div className="app container-fluid row m-0">
