@@ -22,12 +22,22 @@ h1,h2,h3,h4,h5{
   color:#fff;
 }
 
+a, a:hover, a:visited, a:focus {
+  text-decoration-line: underline !important;
+  text-decoration-style: dotted !important;
+  color:#949495;
+}
+
 p{
   color:#949495;
+  line-height: 2;
 }
 .w-40{
   width: 40%!important;
 }
 .w-60{
   width: 60%!important;
+}
+.social-links li a{
+padding: 0 1rem 0 0;
 }
