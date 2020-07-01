@@ -9,3 +9,11 @@
 .name h2{
 font-size: 2.9em;
 }
+
+  
+a.nav-link,a.nav-link:hover, a.nav-link:visited, a.nav-link:focus {
+    text-decoration-line: underline;
+    text-decoration-style: dotted ;
+    color:#ffffff;
+    
+  }

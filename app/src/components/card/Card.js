@@ -1,17 +1,32 @@
 import React from 'react';
 import './Card.css';
 
-function Card() {
+class Card extends React.Component {
 
-    return (
-        <div className="card bg-dark m-3">
-            <div className="card-body">
-                <h5 className="card-title">Project Title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
+    navigateToProject = () => {
+        console.log(this.props);
+    }
 
-    )
+    render() {
+
+        return (
+            <a className="card bg-dark m-3 zoom" href={this.props.project.url}>
+                <div className="card-body">
+                    <div className="tags m-3">
+                        {this.props.project.tags.map((t, i) => {
+                            return <span className="pr-3" key={i}>{t}</span>
+                        })}
+                    </div>
+
+                    <h5 className="card-title m-3">
+                        {this.props.project.title}
+                    </h5>
+                    <p className="card-text m-3">{this.props.project.desc}</p>
+                </div>
+            </a>
+
+        )
+    }
 }
 
 export default Card;
