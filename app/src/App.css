@@ -40,3 +40,28 @@ p{
 .social-links li a{
 padding: 0 1rem 0 0;
 }
+.gradient-row{
+  height: 20px;
+  z-index: 1002;
+  display: block;
+  position: fixed;
+}
+.gradient-above {
+  background: linear-gradient(0deg,rgba(21,21,21,0),#151515);
+  top: 0;
+}
+
+.gradient-below{
+  background: linear-gradient(180deg,rgba(21,21,21,0),#151515);
+  bottom: 0;
+}
+
+.fin{
+  color: #202022;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.fin::before, .fin::after{
+    content: " \2014 \00A0 ";
+}

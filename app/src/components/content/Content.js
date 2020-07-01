@@ -14,7 +14,7 @@ function Content() {
             desc: 'My portfolio statically hosted in GHpages',
             tags: ['React'],
             url: 'https://github.com/nirmalkrishnav/nirmalkrishnav.github.io'
-        }
+        },
     ];
 
     return (
@@ -22,6 +22,12 @@ function Content() {
             {cards.map((val, index) => {
                 return <Card key={index} project={val} />
             })}
+
+            <div className="text-center m-5">
+                <span className="fin">
+                    Ende
+            </span>
+            </div>
         </div>
     );
 }
