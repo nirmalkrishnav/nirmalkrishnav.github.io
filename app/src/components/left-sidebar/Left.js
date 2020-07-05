@@ -3,13 +3,13 @@ import './Left.css';
 import Bio from './../bio/Bio';
 
 class Left extends React.Component {
-    master =
-        `Hello, I'm Nirmal Krishna              |
-    Hallo, ich heiße Nirmal Krishna             |
-    Bonjour, je m'appelle Nirmal Krishna        |
-    வணக்கம் நான் நிர்மல் கிருஷ்ணா         |`;
+    master = [
+        // `Hello, I'm Nirmal Krishna`,
+        `Hallo, ich heiße Nirmal Krishna`,
+        // `Bonjour, je m'appelle Nirmal Krishna`,
+        // `வணக்கம் நான் நிர்மல் கிருஷ்ணா`
+    ];
 
-    greetings = '';
     state = { text: [] }
     timer;
     index = 0;
@@ -24,28 +24,26 @@ class Left extends React.Component {
         this.index = 0;
 
 
+        this.master.forEach((message, index) => {
+            this.typer(message);
+        })
+    }
 
-
+    typer = (message) => {
         this.timer = setInterval(() => {
-            if (this.greetings[this.index] !== this.escapeChar) {
-                const arr = this.state.text;
-                arr.push(this.greetings[this.index]);
-                this.setState({ text: arr })
-            } else {
-                this.setState({ text: [] });
-            }
+
+            const arr = this.state.text;
+            arr.push(message[this.index]);
+            this.setState({ text: arr })
+
             this.index++
 
-            if (this.index >= this.master.length) {
+            if (this.index >= message.length) {
                 clearInterval(this.timer);
-                this.cliEffect();
             }
 
         }, 100)
-
     }
-
-
 
     render() {
         return (
