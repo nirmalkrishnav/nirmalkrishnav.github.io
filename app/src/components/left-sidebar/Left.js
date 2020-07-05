@@ -4,10 +4,15 @@ import Bio from './../bio/Bio';
 
 class Left extends React.Component {
     master = [
-        // `Hello, I'm Nirmal Krishna`,
-        `Hallo, ich heiße Nirmal Krishna`,
-        // `Bonjour, je m'appelle Nirmal Krishna`,
-        // `வணக்கம் நான் நிர்மல் கிருஷ்ணா`
+        `Hey`,
+        `I'm Nirmal Krishna`,
+        `I was 🤩 when I was able to do an effect like this`,
+        `with almost no google..`,
+        `Alright I did search on how to center a div vertically😬`,
+        `Yet I came up with this effect in less than an hour`,
+        `And that is why you should Hire me😊`,
+        `PS: This is not a 2010's YouTube tutorial with an Indian guy on a notepad`,
+        `Okay from the top`
     ];
 
     state = { text: [] }
@@ -16,6 +21,7 @@ class Left extends React.Component {
     escapeChar = '|';
 
     componentDidMount = () => {
+        this.master = [`...`, ...this.master];
         this.cliEffect();
     }
 
@@ -24,32 +30,44 @@ class Left extends React.Component {
         this.index = 0;
 
 
-        this.master.forEach((message, index) => {
-            this.typer(message);
-        })
+        this.master.reduce(
+            (p, x) => p.then(_ => this.typer(x)),
+            Promise.resolve()
+        ).then(r => this.cliEffect());
+
     }
 
     typer = (message) => {
-        this.timer = setInterval(() => {
+        return new Promise((resolve, reject) => {
+            this.index = 0;
+            this.setState({ text: [] })
 
-            const arr = this.state.text;
-            arr.push(message[this.index]);
-            this.setState({ text: arr })
+            this.timer = setInterval(() => {
 
-            this.index++
+                const arr = this.state.text;
+                arr.push(message[this.index]);
+                this.setState({ text: arr })
 
-            if (this.index >= message.length) {
-                clearInterval(this.timer);
-            }
+                this.index++
 
-        }, 100)
+                if (this.index >= message.length) {
+                    clearInterval(this.timer);
+                    setTimeout(() => {
+                        resolve(true);
+                    }, 2000)
+                }
+
+            }, 60)
+        });
+
     }
 
     render() {
         return (
             <div className="left align-items-start d-flex flex-column justify-content-around p-3">
                 <div className="name">
-                    <h2>{this.state.text}</h2>
+                    <code>pitch.js:</code>
+                    <h4>{this.state.text}</h4>
                 </div>
                 <div>
                     <Bio />

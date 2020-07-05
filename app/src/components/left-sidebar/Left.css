@@ -6,8 +6,9 @@
     height:95vh;
 }
 
-.name h2{
-font-size: 2.9em;
+.name h4{
+    font-family: consolas;
+    line-height: 2.5rem;
 }
 
   
