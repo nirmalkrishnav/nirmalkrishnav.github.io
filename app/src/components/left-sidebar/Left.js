@@ -5,14 +5,12 @@ import Bio from './../bio/Bio';
 class Left extends React.Component {
     master = [
         `Hey`,
-        `I'm Nirmal Krishna`,
-        `I was 🤩 when I was able to do an effect like this`,
-        `with almost no google..`,
-        `Alright I did search on how to center a div vertically😬`,
-        `Yet I came up with this effect in less than an hour`,
-        `And that is why you should Hire me😊`,
-        `PS: This is not a 2010's YouTube tutorial with an Indian guy on a notepad`,
-        `Okay from the top`
+        `I'm Nirmal`,
+        `I love creating products,
+        taking up new challenges and learning new stuff`,
+        `I create side projects to learn new libraries/framework`,
+        `and I write what I learnt on dev\.to `,
+        `       `,
     ];
 
     state = { text: [] }
@@ -66,7 +64,7 @@ class Left extends React.Component {
         return (
             <div className="left align-items-start d-flex flex-column justify-content-around p-3">
                 <div className="name">
-                    <code>pitch.js:</code>
+                    <code>pitch.ts:</code>
                     <h4>{this.state.text}</h4>
                 </div>
                 <div>

@@ -22,6 +22,10 @@ class Card extends React.Component {
                         {this.props.project.title}
                     </h5>
                     <p className="card-text m-3">{this.props.project.desc}</p>
+                    {this.props.project.activeDevelopment && this.props.project.activeDevelopment ?
+                        <p className="card-text m-3"><code>inProgress</code></p> :
+                        <></>
+                    }
                 </div>
             </a>
 

@@ -5,7 +5,7 @@ function Bio() {
         <div>
             <p>
                 I’m a Software Engineer currently working with EY.<br />
-                I love javascript. But, Typescript is my Fwb.<br/>
+                I love javascript. But, Typescript is my Fwb.<br />
                 🐍 for backend, coffee for <code>!</code>tiredness.
             </p>
             <ul className="nav social-links">
@@ -18,6 +18,11 @@ function Bio() {
                 <li className="nav-item">
                     <a className="nav-link" href="https://www.linkedin.com/in/nirmal-krishna/">LinkedIn</a>
                 </li>
+
+                <li className="nav-item">
+                    <a className="nav-link" href="https://dev.to/meuequalsd">dev.to</a>
+                </li>
+
             </ul>
         </div>
     )
