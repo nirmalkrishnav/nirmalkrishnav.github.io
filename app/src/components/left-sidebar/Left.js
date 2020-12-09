@@ -9,7 +9,7 @@ class Left extends React.Component {
         `I love creating products,
         taking up new challenges and learning new stuff`,
         `I create side projects to learn new libraries/framework`,
-        `and I write what I learnt on dev\.to `,
+        `and I write what I learnt on dev.to `,
         `       `,
     ];
 
